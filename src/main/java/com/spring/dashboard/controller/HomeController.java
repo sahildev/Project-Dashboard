@@ -3,16 +3,22 @@ package com.spring.dashboard.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Controller
 public class HomeController {
-
+	@Getter
+	@Setter
+	private String dummy;
 	@RequestMapping("/home")
 	public String home( Model modal){
 		// enable logging
-		/*log.debug("In home Controller");*/
+	/*	log.debug("In home Controller");*/
 		return "index";
 	}
 	
